@@ -2,7 +2,7 @@ const WebSocket = require('ws')
 
 const wss = new WebSocket.Server({ port: 3000 })
 
-console.log('Chat V2 Starting up..')
+console.log('Chat Server Starting up..')
 
 function noop () {}
 
@@ -25,13 +25,11 @@ wss.on('connection', function connection (ws, req) {
 
   ws.on('message', function incoming (message) {
     console.log('received: %s', message)
-
     console.log('SUB: ' + message.substring(0, 6))
 
-    // Handle client pseudopings
-    // send pseudoping message back to sender...
+    // Handle client pseudo pings
+    // send pseudo ping message back to sender...
     if (message.substring(0, 6) === '_PING_') {
-      // ws.send('_PINGBACK_' + Date.now());
       ws.send(message)
       return
     }
@@ -54,7 +52,8 @@ wss.on('connection', function connection (ws, req) {
   ws.send('Hello, server here, thanks for connecting ')
 })
 
-const interval = setInterval(function ping () {
+// Ping clients at 30s intervals
+setInterval(function ping () {
   console.log('Starting Interval loop...')
 
   wss.clients.forEach(function each (ws) {
@@ -68,7 +67,8 @@ const interval = setInterval(function ping () {
   })
 }, 30000)
 
-const broadcastInterval = setInterval(function broadcast () {
+// Broadcast Message to all clients at 5 minute intervals
+setInterval(function broadcast () {
   var d = new Date()
   var formatd = d.toLocaleString()
 
@@ -77,4 +77,4 @@ const broadcastInterval = setInterval(function broadcast () {
       ws.send('SERVER BROADCAST: DateTime : ' + formatd)
     }
   })
-}, 120000)
+}, 300000)
