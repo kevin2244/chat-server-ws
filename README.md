@@ -37,8 +37,9 @@ uses port 3000 by default.
 
 ## License
 
-N/A
+[MIT](https://github.com/kevin2244/chat-server-ws/blob/master/LICENSE.md)
 
 
 ## See Also
-See also the corresponding chat client package you can use to connect to this chat server.
+See also the corresponding chat client package you can use to connect to this chat server:
+[react-client-chat](https://github.com/kevin2244/react-client-chat)
