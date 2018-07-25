@@ -60,6 +60,9 @@ forcibly closed.
 
 * [Node v8.11.2](https://nodejs.org/en/)
 
+## Coding Standard
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 ## Authors
 
 * **Kevin Smith**
