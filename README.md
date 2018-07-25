@@ -1,6 +1,6 @@
 # chat-server-ws
 
-A demo Websockets based webserver using the Node 'ws' package.
+A simple Websockets based chat server using the Node 'ws' package.
 
 ## Getting Started
 
@@ -8,7 +8,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* A working installation of Node.js
+* A working installation of [Node.js](https://nodejs.org/en/)
+
 
 * An available port.
 
@@ -17,15 +18,26 @@ These instructions will get you a copy of the project up and running on your loc
 
 Clone the repository.
 
-Install dependencies inside the cloned repository directory
+Install dependencies from within the cloned repository directory
 
 ```
 npm install
 ```
 
-You must ensure a port is available for the chat server, which
-uses port 3000 by default.
+You should ensure a port is available for connecting clients, which
+is port 3000 by default.
 
+## Features
+
+This chat server allows multiple clients to connect and allow users to chat.
+
+It makes use of ws's facility to use ping/pong messages to detect broken connections
+between server and client. If a broken connection is detected, the connection is
+forcibly closed.
+
+Clients are uniquely identified.
+
+The chat server periodically broadcasts a message to all connected clients.
 
 ## Built with
 
@@ -41,5 +53,5 @@ uses port 3000 by default.
 
 
 ## See Also
-See also the corresponding chat client package you can use to connect to this chat server:
+See also the corresponding chat client package you can use to connect to this chat server via a browser:
 [react-client-chat](https://github.com/kevin2244/react-client-chat)
