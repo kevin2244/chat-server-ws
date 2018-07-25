@@ -27,6 +27,21 @@ npm install
 You should ensure a port is available for connecting clients, which
 is port 3000 by default.
 
+If you want to use a port other than 3000, you will need to adust this in the code.
+
+### Running the chat server
+
+From within the cloned directory
+
+```
+npm start
+```
+## Connecting to the chat server
+
+Once running, you will now be be able to connect to the chat server via your open port,
+with an appropriate chat client e.g.
+[react-client-chat](https://github.com/kevin2244/react-client-chat)
+
 ## Features
 
 This chat server allows multiple clients to connect and allow users to chat.
