@@ -44,17 +44,17 @@ with an appropriate chat client e.g.
 
 ## Features
 
-This chat server allows multiple clients to connect and allow users to chat.
+* This chat server allows multiple clients to connect and allow users to chat.
 
-It makes use of ws's facility to use ping/pong messages to detect broken connections
+* It makes use of ws's facility to use ping/pong messages to detect broken connections
 between server and client. If a broken connection is detected, the connection is
 forcibly closed.
 
-Clients are uniquely identified.
+* Clients are uniquely identified.
 
-All chat messages are sent to all connected clients.
+* All chat messages are sent to all connected clients.
 
-The chat server periodically broadcasts a message to all connected clients.
+* The chat server periodically broadcasts a message to all connected clients.
 
 ## Built with
 
