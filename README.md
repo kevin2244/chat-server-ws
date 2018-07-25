@@ -1,6 +1,6 @@
 # chat-server-ws
 
-A simple Websockets based chat server using the Node 'ws' package.
+A simple Websockets based chat server using the Node.js [ws](https://github.com/websockets/ws) package.
 
 ## Getting Started
 
