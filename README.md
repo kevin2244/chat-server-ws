@@ -52,6 +52,8 @@ forcibly closed.
 
 Clients are uniquely identified.
 
+All chat messages are sent to all connected clients.
+
 The chat server periodically broadcasts a message to all connected clients.
 
 ## Built with
